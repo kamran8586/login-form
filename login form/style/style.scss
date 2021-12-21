@@ -1,0 +1,108 @@
+$text-selection-color: (228, 255, 73);
+@mixin height_width ($h, $w) {
+    height: $h;
+    width: $w;
+}
+
+@mixin font($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin center_items() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/*  form parent styling */
+
+.parent {
+    @include center_items();
+    height: 100vh;
+}
+
+.form-card-parent {
+    @include height_width(92vh, 95%);
+    @include center_items();
+}
+
+.left-side-half {
+    background-color: rgb(41, 250, 232);
+    background-image: linear-gradient(#48f7ae, #25f1be);
+    @include height_width(98%, 48%);
+    @include center_items();
+    box-shadow: 5px 5px 5px rgb(219, 217, 217);
+    border-radius: 3px;
+    margin: 0 10px;
+    .btn {
+        padding-right: 15px;
+        margin-top: 1.2rem;
+        box-shadow: 1px 1px 5px #1e943c;
+    }
+}
+
+.right-side-half {
+    .content {
+        height: 38%;
+        @include flex(column, space-between, center);
+    }
+    @include height_width(98%, 48%);
+    background-color: rgb(41, 250, 232);
+    background-image: linear-gradient(rgb(242, 252, 111), #e5ff6f);
+    box-shadow: 5px 5px 5px rgb(219, 217, 217);
+    border-radius: 3px;
+    @include center_items();
+    .btn {
+        border-radius: 5px;
+    }
+}
+
+.heading {
+    @include font(2.7rem, bold);
+}
+
+.content {
+    text-align: center;
+}
+
+.selection {
+    &::selection {
+        background: rgb(255, 255, 102);
+    }
+}
+
+.btn {
+    text-align: center;
+    border-radius: 8px;
+}
+
+@media (max-width:1100px) {
+    .left-side-half {
+        display: none;
+    }
+    .right-side-half {
+        width: 100%;
+        .content {
+            height: 30%;
+        }
+    }
+    .form-card-parent {
+        width: 98%;
+    }
+}

@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*  form parent styling */
+.parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.form-card-parent {
+  height: 92vh;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left-side-half {
+  background-color: #29fae8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#48f7ae), to(#25f1be));
+  background-image: linear-gradient(#48f7ae, #25f1be);
+  height: 98%;
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 5px 5px 5px #dbd9d9;
+          box-shadow: 5px 5px 5px #dbd9d9;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+.left-side-half .btn {
+  padding-right: 15px;
+  margin-top: 1.2rem;
+  -webkit-box-shadow: 1px 1px 5px #1e943c;
+          box-shadow: 1px 1px 5px #1e943c;
+}
+
+.right-side-half {
+  height: 98%;
+  width: 48%;
+  background-color: #29fae8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2fc6f), to(#e5ff6f));
+  background-image: linear-gradient(#f2fc6f, #e5ff6f);
+  -webkit-box-shadow: 5px 5px 5px #dbd9d9;
+          box-shadow: 5px 5px 5px #dbd9d9;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-side-half .content {
+  height: 38%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-side-half .btn {
+  border-radius: 5px;
+}
+
+.heading {
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+
+.content {
+  text-align: center;
+}
+
+.selection::-moz-selection {
+  background: #ffff66;
+}
+
+.selection::selection {
+  background: #ffff66;
+}
+
+.btn {
+  text-align: center;
+  border-radius: 8px;
+}
+
+@media (max-width: 1100px) {
+  .left-side-half {
+    display: none;
+  }
+  .right-side-half {
+    width: 100%;
+  }
+  .right-side-half .content {
+    height: 30%;
+  }
+  .form-card-parent {
+    width: 98%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
